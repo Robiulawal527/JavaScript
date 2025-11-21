@@ -1,0 +1,3 @@
+Mood: Excited
+
+Built my first file reading application.
