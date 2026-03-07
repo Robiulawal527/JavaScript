@@ -1,12 +1,24 @@
 <style>
-button {
+.red-button {
     background-color: red;
     color: white;
-    padding: 10px;
     border: none;
+    padding: 10px 20px;
     cursor: pointer;
-}           
+}
+
+.red-button:hover {
+    background-color: darkred;
+}
 </style>
-<button> hello </button>
-<p>paragraph of text</p>
+
+<button title="Good job" class = "red-button">
+     hello 
+</button>
+
+<p>paragraph of <button> hello</button>text</p>
+
+<script>
+    alert("Hello, World!");
+</script>
 
