@@ -1,0 +1,16 @@
+:root { --bg: #0f172a; --glass: rgba(30,41,59,0.9); --btn-bg: rgba(255,255,255,0.05); --btn-hover: rgba(255,255,255,0.1); --operator: #f59e0b; --text: #f8fafc; }
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background: var(--bg); color: var(--text); min-height: 100vh; display: grid; place-items: center; }
+.calculator { width: 350px; background: var(--glass); padding: 1.5rem; border-radius: 24px; box-shadow: 0 25px 50px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.05); }
+.display { background: rgba(0,0,0,0.3); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; text-align: right; display: flex; flex-direction: column; justify-content: space-around; word-wrap: break-word; word-break: break-all; }
+.previous-operand { color: #94a3b8; font-size: 1.1rem; min-height: 1.5rem; }
+.current-operand { color: white; font-size: 2.5rem; font-weight: 600; }
+.buttons { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; }
+.btn { border: none; border-radius: 12px; padding: 1.25rem; font-size: 1.25rem; background: var(--btn-bg); color: white; cursor: pointer; transition: 0.2s; font-weight: 600; }
+.btn:hover { background: var(--btn-hover); }
+.operator { color: var(--operator); background: rgba(245, 158, 11, 0.1); }
+.operator:hover { background: rgba(245, 158, 11, 0.2); }
+.equal { background: var(--operator); color: #000; }
+.equal:hover { background: #d97706; }
+.clear, .delete { color: #ef4444; background: rgba(239, 68, 68, 0.1); }
+.span-2 { grid-column: span 2; }

@@ -1,0 +1,17 @@
+:root { --primary: #3b82f6; --bg: #0f172a; --glass: rgba(30, 41, 59, 0.7); --text: #f8fafc; }
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background: var(--bg); color: var(--text); min-height: 100vh; display: grid; place-items: center; }
+.review-card {
+  width: 90vw; max-width: 500px; text-align: center;
+  background: var(--glass); padding: 3rem; border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5); backdrop-filter: blur(10px);
+}
+#author { font-size: 1.5rem; font-weight: 600; text-transform: uppercase; margin-bottom: 0.25rem; }
+#job { color: var(--primary); font-size: 0.9rem; text-transform: uppercase; margin-bottom: 1.5rem; letter-spacing: 2px; }
+#info { margin-bottom: 2rem; color: #cbd5e1; line-height: 1.6; }
+.btn-container { display: flex; justify-content: center; gap: 1rem; margin-bottom: 1.5rem; }
+button { cursor: pointer; border: none; border-radius: 8px; font-weight: 600; transition: all 0.3s; }
+.prev-btn, .next-btn { background: rgba(59, 130, 246, 0.2); color: var(--primary); padding: 0.5rem 1rem; font-size: 1.2rem; }
+.prev-btn:hover, .next-btn:hover { background: var(--primary); color: white; }
+.random-btn { background: var(--primary); color: white; padding: 0.75rem 1.5rem; }
+.random-btn:hover { background: #2563eb; }
