@@ -25,3 +25,4 @@ console.log("input: password123");
 console.log("SHA512 HashedPassword: ", sha512Hash);
 
 console.log(2 ** 32 / 10 ** 9);
+
