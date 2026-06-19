@@ -23,5 +23,7 @@ async function getQuote() {
 
 newQuoteBtn.addEventListener('click', getQuote);
 
-// Load initial quote
+// Load initial quote on page load
 getQuote();
+
+
