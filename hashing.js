@@ -26,3 +26,16 @@ console.log("SHA512 HashedPassword: ", sha512Hash);
 
 console.log(2 ** 32 / 10 ** 9);
 
+
+hashPassword = (password) => {
+  const salt = crypto.randomBytes(16).toString("hex");
+  const hash = crypto
+    .pbkdf2Sync(password, salt, 1000, 64, "sha512")
+    .toString("hex");
+  return { salt: salt, hash: hash };
+};
+
+const hashedPassword = hashPassword("password123");
+console.log("Salt: ", hashedPassword.salt);
+console.log("Hashed Password: ", hashedPassword.hash);
+
