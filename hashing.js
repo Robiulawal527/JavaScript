@@ -39,3 +39,18 @@ const hashedPassword = hashPassword("password123");
 console.log("Salt: ", hashedPassword.salt);
 console.log("Hashed Password: ", hashedPassword.hash);
 
+
+const verifyPassword = (password, salt, hash) => {
+  const hashVerify = crypto
+    .pbkdf2Sync(password, salt, 1000, 64, "sha512")
+    .toString("hex");
+  return hash === hashVerify;
+};
+
+const isPasswordValid = verifyPassword(
+  "password123",
+  hashedPassword.salt,
+  hashedPassword.hash
+);
+console.log("Is Password Valid: ", isPasswordValid);
+
